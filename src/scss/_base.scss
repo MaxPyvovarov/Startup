@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab&display=swap');
 
 * {
     margin: 0;
@@ -16,7 +16,7 @@ img {
 }
 
 body {
-    font: 400 16px/30px $base-font;
+    font: 400 14px/1.25 $font-roboto;
     color: $font-color;
 }
 
@@ -35,10 +35,11 @@ table {
 
 .wrapper {
     overflow: hidden;
+    position: relative;
 }
 
 .container {
-    max-width: 1630px;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
 }

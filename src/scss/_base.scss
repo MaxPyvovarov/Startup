@@ -18,10 +18,13 @@ img {
 body {
     font: 400 14px/1.25 $font-roboto;
     color: $font-color;
+    $font-montserrat: 'Montserrat', Arial, Tahoma, sans-serif;
+    $font-roboto: 'Roboto Slab', 'Times New Roman', serif;
 }
 
 a {
-    text-decoration: underline;
+    text-decoration: none;
+    cursor: pointer;
     color: #000;
 }
 

@@ -96,7 +96,7 @@ const config = {
                 quality: '80',
                 progressive: true
             }
-        })
+        }),
     ]
 };
 

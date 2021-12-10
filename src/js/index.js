@@ -1,4 +1,5 @@
 window.$ = window.jQuery = require('jquery');
+import Swiper, {Navigation} from 'swiper';
 
 $(document).ready(function () {
     //Mobile menu
@@ -25,4 +26,18 @@ $(document).ready(function () {
         // top = $(id).offset().top;
         // $('body,html').animate({scrollTop: top}, 700);
     });
+
+    const swiper = new Swiper('#about .swiper', {
+        loop: true,
+        autoplay: {
+            delay: 5000,
+          },
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        slidesPerView: 4,
+        spaceBetween: 30,
+      });
 });

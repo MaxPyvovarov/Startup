@@ -30,7 +30,7 @@ $(document).ready(function () {
     const swiper = new Swiper('#about .swiper', {
         loop: true,
         autoplay: {
-            delay: 5000,
+        delay: 5000,
           },
         // Navigation arrows
         navigation: {

@@ -1,5 +1,6 @@
 window.$ = window.jQuery = require('jquery');
-import Swiper, {Navigation} from 'swiper';
+import Swiper, { Autoplay, Navigation } from 'swiper';
+Swiper.use([ Autoplay, Navigation ]);
 
 $(document).ready(function () {
     //Mobile menu
@@ -21,23 +22,45 @@ $(document).ready(function () {
                 window.location.hash = hash;
             });
         }
-        // event.preventDefault();
-        // var id  = $(this).attr('href'),
-        // top = $(id).offset().top;
-        // $('body,html').animate({scrollTop: top}, 700);
     });
 
     const swiper = new Swiper('#about .swiper', {
         loop: true,
         autoplay: {
-        delay: 5000,
-          },
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+            delay: 5000,
         },
-        slidesPerView: 4,
+        slidesPerView: 1,
         spaceBetween: 30,
-      });
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            600: {
+                slidesPerView: 2,
+                spaceBetween: 30
+              },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30
+              },
+            
+            1224: {
+              slidesPerView: 4,
+              spaceBetween: 30
+            },
+        },
+    });
 });
+
+$(window).scroll(function () {
+    const headerHeight = $('.wrapper-fixed').outerHeight();
+    const bannerHeight = $('.header').outerHeight();
+    if($(window).scrollTop() >= (bannerHeight - headerHeight)) {
+        $('.wrapper-fixed').addClass('sticky');
+        console.log('hello');
+    }
+    else {
+        $('.wrapper-fixed').removeClass('sticky');
+    }
+})

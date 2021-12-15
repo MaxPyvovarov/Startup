@@ -46,3 +46,36 @@ table {
     margin: 0 auto;
     padding: 0 15px;
 }
+
+.main-title {
+    font-size: 20px;
+    font-family: $font-montserrat;
+    font-weight: 400;
+    color: $font-color;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding-bottom: 25px;
+    position: relative;
+    
+    &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: calc(50% - 25px);
+        width: 50px;
+        height: 2px;
+        background-color: #555;
+}
+}
+
+.section-head {
+    text-align: center;
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+        width: 100%;
+        padding: 25px 0 71px;
+    }
+}

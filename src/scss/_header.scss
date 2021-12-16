@@ -26,7 +26,7 @@
       z-index: 5;
 
       &.sticky {
-        background: $red;
+        background: #792819;
         box-shadow: 0 2px 8px 1px rgba(0,0,0,.2);
     }
   }
@@ -36,10 +36,23 @@
       flex-direction: row;
       vertical-align: baseline;
 
+      @include screen(1024px) {
+          justify-content: space-between;
+          padding: 15px;
+          flex-direction: column;
+      }
+
       a {
           padding: 0 30px 0 0;
           color: #fff;
           font-family: $font-montserrat;
+
+          @include screen(1024px) {
+            text-transform: uppercase;
+            display: block;
+            font-size: 16px;
+            padding: 20px;
+        }
           
           &:last-child {
                 padding: 0 230px 0 0;
@@ -60,6 +73,27 @@
 
       &-mobile {
         justify-content: center;
+
+        @include screen(1024px) {
+            z-index: 10;
+            position: fixed;
+            height: 100vh;
+            width: 320px;
+            overflow-y: auto;
+            padding: 80px 0 40px;
+            background: #792819;
+            right: -110%;
+            top: 0;
+            box-shadow: -2px 0px 6px 1px rgba(50, 50, 50, .3);
+            display: block;
+            transition: .5s ease;
+            text-align: right;
+        }
+        &.active {
+            @include screen(1024px) {
+                right: 0;
+            }
+        }
       }
   }
 }
@@ -67,23 +101,36 @@
 //   MOBILE MENU SECTION
 .menu-button, .close-menu {
     display: none;
+
+    @include screen(1024px) {
+        display: block;
+    }
 }
 
-.menu-button img {
-    width: 32px;
-    height: 32px;
+.menu-button {
+    @include screen(1024px) {
+        width: 48px;
+        height: auto;
+    }
+
+    img {
+        width: 32px;
+        height: 32px;
+    }
 }
 
-.close-menu img {
-    width: 32px;
-    height: 32px;
-    background: no-repeat 50% 50%;
-    background-size: 32px;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 40px;
-    transition: .3s ease;
+.close-menu {
+    img {
+        width: 32px;
+        height: 32px;
+        background: no-repeat 50% 50%;
+        background-size: 32px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 40px;
+        transition: .3s ease;
+    }
 }
 
 // CAPTION 
@@ -108,6 +155,10 @@
         font-size: 20px;
         margin: 0 0 50px;
         text-transform: capitalize;
+
+        @include screen(1024px) {
+            font-size: 16px;
+        }
     }
 
     .caption__btn {

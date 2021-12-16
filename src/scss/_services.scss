@@ -1,16 +1,28 @@
 .services {
     padding: 100px 0;
 
+    @include screen(1024px) {
+        padding: 60px 0;
+    }
+
     &__content {
         display: flex;
         justify-content: space-between;
         padding-top: 70px;
+
+        @include screen (768px) {
+            flex-direction: column;
+        }
     }
 
     &__block {
         display: flex;
         flex-direction: column;
         text-align: center;
+
+        @include screen(768px) {
+            padding-bottom: 40px;
+        }
 
         h3 {
             padding-top: 30px;

@@ -1,0 +1,49 @@
+.clients {
+    background: $grey-section;
+
+    &__logos {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0 0 45px;
+
+        li {
+            padding: 10px 32px;
+        }
+    }
+
+    .swiper-wrapper {
+        padding-bottom: 48px;
+    }
+    
+    .swiper-pagination {
+        bottom: 0;
+    }
+
+    .swiper-pagination-bullet {
+        width: 13px;
+        height: 13px;
+        background: #ddd;
+
+        &.swiper-pagination-bullet-active {
+            background: $red;
+        }
+
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.67;
+
+        p {
+            margin: 0 0 28px;
+        }
+    }
+
+    &__swiper-author {
+        font-size: 20px;
+
+    }
+}

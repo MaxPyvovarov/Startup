@@ -51,6 +51,13 @@ $(document).ready(function () {
             },
         },
     });
+
+     //Tabs
+    $('.tabs__button').on('click', function () {
+        $(".tabs .tabs__button").removeClass("active").eq($(this).index()).addClass("active");
+        $(".tabs__item").hide().eq($(this).index()).fadeIn();
+    }).eq(0).addClass("active");
+    $(".tabs__item").eq(0).fadeIn();
 });
 
 $(window).scroll(function () {

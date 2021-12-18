@@ -10,6 +10,10 @@
 
         li {
             padding: 10px 32px;
+
+            @include screen(576px) {
+                padding: 15px 32px;
+            }
         }
     }
 

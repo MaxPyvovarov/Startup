@@ -1,5 +1,5 @@
 .header {
-  background: url('../images/banner.jpg') no-repeat 50% 50%;
+  background-position: 50% 50%;
   background-size: cover;
   min-height: 100vh;
   width: 100%;
@@ -63,7 +63,7 @@
           }
       }
       &-wrapper {
-          padding: 40px 0 0;
+          padding: 40px 0 10px;
           max-width: 1140px;
           display: flex;
           align-items: center;
@@ -158,24 +158,6 @@
 
         @include screen(1024px) {
             font-size: 16px;
-        }
-    }
-
-    .caption__btn {
-        display: inline-block;
-        font-weight: 400;
-        font-size: 16px;
-        color: #fff;
-        text-transform: uppercase;
-        padding: 15px 30px;
-        border: 1px solid #fff;
-        transition: .3s ease;
-
-        &:hover {
-            color: #000;
-            background-color: #fff;
-            border: 1px solid #000;
-
         }
     }
 }

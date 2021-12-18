@@ -1,0 +1,26 @@
+.paralax {
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    text-align: center;
+    color: $white;
+
+    &__content {
+        line-height: 1.5;
+        p {
+            font-size: 30px;
+
+            @include screen(476px) {
+                font-size: 24px;
+            }
+
+            span {
+                text-transform: uppercase;
+            }
+        }
+
+        a {
+            margin-top: 50px;
+        }
+    }
+}

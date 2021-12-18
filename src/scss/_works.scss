@@ -89,6 +89,10 @@
         align-items: center;
         justify-content: center;
         margin: 30px 45px;
+
+        @include screen(476px) {
+            flex-direction: column;
+        }
     }
 
     &__button {
@@ -108,5 +112,21 @@
 
     .col-33 {
         position: relative;
+        
+        @include screen(1200px) {
+            width: 45%;
+            text-align: center;
+            margin: 10px;
+
+            &:nth-child(2n+1) {
+                display: none;
+            }
+        }
+
+        @include screen(600px) {
+            width: 75%;
+            padding: 15px 0;
+            margin: 0 auto;
+        }
     }
 }

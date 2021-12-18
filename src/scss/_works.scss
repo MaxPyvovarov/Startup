@@ -83,12 +83,15 @@
 }
 
 .tabs {
-
     &__buttons {
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 30px 45px;
+
+        @include screen(476px) {
+            flex-direction: column;
+        }
     }
 
     &__button {
@@ -108,5 +111,25 @@
 
     .col-33 {
         position: relative;
+
+        @include screen(860px) {
+            width: 45%;
+            height: auto;
+
+            &:nth-child(2n+1) {
+                display: none;
+            }
+        }
+
+        @include screen(670px) {
+            width: 60%;
+            padding: 30px 0;
+            margin: 0 auto;
+        }
+
+        @include screen(476px) {
+            width: 75%;
+            padding: 10px 0;
+        }
     }
 }

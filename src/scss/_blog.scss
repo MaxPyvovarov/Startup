@@ -19,6 +19,10 @@
         display: flex;
         padding: 38px 0;
 
+        @include screen(900px) {
+            flex-direction: column;
+        }
+
         & + .blog__item {
             border-top: 1px solid #ddd;
         }
@@ -29,6 +33,14 @@
         display: flex;
         flex-shrink: 0;
         justify-content: center;
+
+        @include screen(900px) {
+            padding: 0 0 20px 40px;
+        }
+
+        @include screen(500px) {
+            display: none;
+        }
     }
 
     &__description {

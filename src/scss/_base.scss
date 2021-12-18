@@ -72,6 +72,25 @@ section {
     }
 }
 
+.main-btn {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 15px 27px;
+    letter-spacing: 1px;
+    border: 2px solid #fff;
+    transition: .3s ease;
+
+    &:hover {
+        color: $red;
+        background-color: #fff;
+        border: 1px solid $red;
+
+    }
+}
+
 .section-head {
     text-align: center;
 

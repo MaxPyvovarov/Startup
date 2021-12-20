@@ -11,7 +11,7 @@ $(document).ready(function () {
         $('.navigation-mobile').removeClass('active');
     })
 
-    //Smooth scroll
+    //Anchor links
     $('a').on("click", function (event) {
         if (this.hash !== '') {
             event.preventDefault();

@@ -1,0 +1,10 @@
+.footer {
+    background: $red;
+    padding-top: 100px;
+
+    &__socials {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

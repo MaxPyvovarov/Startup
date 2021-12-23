@@ -186,10 +186,20 @@ section {
         display: flex;
         justify-content: space-between;
 
+        @include screen(476px) {
+            flex-direction: column;
+        }
+
         input[type='text'],
         input[type='email'],
         input {
             width: calc(50% - 15px);
+        }
+
+        input[type='text']:nth-child(1) {
+            @include screen (476px) {
+                margin-bottom: 20px;
+            }
         }
     }
 
@@ -201,6 +211,10 @@ section {
 
         .button-dark {
             margin-right: 38px;
+
+            @include screen(476px) {
+                margin-bottom: 10px;
+            }
         }
     }
 }

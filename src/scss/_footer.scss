@@ -1,10 +1,61 @@
 .footer {
     background: $red;
     padding-top: 100px;
+    color: $white;
+    text-align: center;
 
     &__socials {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        position: relative;
+        padding-bottom: 30px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: calc(50% - 25px);
+            width: 50px;
+            height: 2px;
+            background-color: $white;
+        }
+
+        &-image {
+            border: 2px solid $white;
+            border-radius: 50px;
+            width: 40px;
+            height: 40px;
+            align-self: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .3s ease;
+            line-height: 0;
+
+            & + .footer__socials-image {
+                margin-left: 14px;
+            }
+            
+            &:hover {
+                background: $white;
+                
+                img {
+                    filter: none;
+                }
+            }
+        
+            img {
+                width: 18px;
+                filter: brightness(0) invert(1);
+            
+            }
+        }
+    }
+
+    p {
+        margin-top: 27px;
+        text-transform: uppercase;
     }
 }

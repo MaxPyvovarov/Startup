@@ -2,6 +2,10 @@
 
     &__content {
         display: flex;
+
+        @include screen (768px) {
+            flex-direction: column-reverse;
+        }
     }
 
     &__form {
@@ -14,6 +18,10 @@
         padding-right: 30px;
         font-size: 12px;
         line-height: 20px;
+
+        @include screen (768px) {
+            padding-top: 50px;
+        }
 
         a {
             font-size: 12px;

@@ -523,10 +523,16 @@ section {
 .form__group {
   display: flex;
   justify-content: space-between; }
+  @media (max-width: 476px) {
+    .form__group {
+      flex-direction: column; } }
   .form__group input[type='text'],
   .form__group input[type='email'],
   .form__group input {
     width: calc(50% - 15px); }
+  @media (max-width: 476px) {
+    .form__group input[type='text']:nth-child(1) {
+      margin-bottom: 20px; } }
 
 .form__footer {
   font-size: 12px;
@@ -535,6 +541,9 @@ section {
   align-items: center; }
   .form__footer .button-dark {
     margin-right: 38px; }
+    @media (max-width: 476px) {
+      .form__footer .button-dark {
+        margin-bottom: 10px; } }
 
 .header {
   background-position: 50% 50%;
@@ -558,7 +567,7 @@ section {
     width: 100%;
     z-index: 5; }
     .header .wrapper-fixed.sticky {
-      background: #792819;
+      background: #c0301c;
       box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.2); }
   .header .navigation {
     display: flex;
@@ -1041,6 +1050,9 @@ section {
 
 .contact__content {
   display: flex; }
+  @media (max-width: 768px) {
+    .contact__content {
+      flex-direction: column-reverse; } }
 
 .contact__form {
   max-width: 730px;
@@ -1051,6 +1063,9 @@ section {
   padding-right: 30px;
   font-size: 12px;
   line-height: 20px; }
+  @media (max-width: 768px) {
+    .contact__info {
+      padding-top: 50px; } }
   .contact__info a {
     font-size: 12px;
     color: #555;
@@ -1072,11 +1087,49 @@ section {
 
 .footer {
   background: #c0301c;
-  padding-top: 100px; }
+  padding-top: 100px;
+  color: #fff;
+  text-align: center; }
   .footer__socials {
     display: flex;
-    justify-content: space-between;
-    align-items: center; }
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 30px; }
+    .footer__socials:after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: calc(50% - 25px);
+      width: 50px;
+      height: 2px;
+      background-color: #fff; }
+    .footer__socials-image {
+      border: 2px solid #fff;
+      border-radius: 50px;
+      width: 40px;
+      height: 40px;
+      align-self: center;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: .3s ease;
+      line-height: 0; }
+      .footer__socials-image + .footer__socials-image {
+        margin-left: 14px; }
+      .footer__socials-image:hover {
+        background: #fff; }
+        .footer__socials-image:hover img {
+          -webkit-filter: none;
+                  filter: none; }
+      .footer__socials-image img {
+        width: 18px;
+        -webkit-filter: brightness(0) invert(1);
+                filter: brightness(0) invert(1); }
+  .footer p {
+    margin-top: 27px;
+    text-transform: uppercase; }
 
 
 /*# sourceMappingURL=style.css.map*/

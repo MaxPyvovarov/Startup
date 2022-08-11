@@ -1,220 +1,226 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
 }
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    text-transform: uppercase;
+::-webkit-input-placeholder {
+	/* Chrome/Opera/Safari */
+	text-transform: uppercase;
 }
-::-moz-placeholder { /* Firefox 19+ */
-    text-transform: uppercase;
+::-moz-placeholder {
+	/* Firefox 19+ */
+	text-transform: uppercase;
 }
-:-ms-input-placeholder { /* IE 10+ */
-    text-transform: uppercase;
+:-ms-input-placeholder {
+	/* IE 10+ */
+	text-transform: uppercase;
 }
-:-moz-placeholder { /* Firefox 18- */
-    text-transform: uppercase;
+:-moz-placeholder {
+	/* Firefox 18- */
+	text-transform: uppercase;
 }
 
 ul {
-    list-style: none;
+	list-style: none;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 body {
-    font: 400 14px/1.25 $font-roboto;
-    color: $font-color;
-    $font-montserrat: 'Montserrat', Arial, Tahoma, sans-serif;
-    $font-roboto: 'Roboto Slab', 'Times New Roman', serif;
+	font: 400 14px/1.25 $font-roboto;
+	color: $font-color;
+	$font-montserrat: 'Montserrat', Arial, Tahoma, sans-serif;
+	$font-roboto: 'Roboto Slab', 'Times New Roman', serif;
 }
 
 a {
-    text-decoration: none;
-    cursor: pointer;
-    color: #000;
+	text-decoration: none;
+	cursor: pointer;
+	color: #000;
 }
 
 input {
-    outline: none;
+	outline: none;
 }
 
 table {
-    border-collapse: collapse;
+	border-collapse: collapse;
 }
 
 section {
-    padding: 92px 0;
+	padding: 92px 0;
 }
 
 .wrapper {
-    overflow: hidden;
-    position: relative;
+	overflow: hidden;
+	position: relative;
 }
 
 .container {
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 0 15px;
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
 
 .main-title {
-    font-size: 20px;
-    font-family: $font-montserrat;
-    font-weight: 400;
-    color: $font-color;
-    text-transform: uppercase;
-    line-height: 1.2;
-    padding-bottom: 25px;
-    position: relative;
-    
-    &:after {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: calc(50% - 25px);
-        width: 50px;
-        height: 2px;
-        background-color: #555;
-    }
+	font-size: 20px;
+	font-family: $font-montserrat;
+	font-weight: 400;
+	color: $font-color;
+	text-transform: uppercase;
+	line-height: 1.2;
+	padding-bottom: 25px;
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: calc(50% - 25px);
+		width: 50px;
+		height: 2px;
+		background-color: #555;
+	}
 }
 
 .title-14 {
-    font-family: $font-montserrat;
-    font-size: 14px;
-    text-transform: uppercase;
-    margin: 0 0 12px;
+	font-family: $font-montserrat;
+	font-size: 14px;
+	text-transform: uppercase;
+	margin: 0 0 12px;
 }
 
 .main-btn {
-    display: inline-block;
-    font-weight: 400;
-    font-size: 16px;
-    color: #fff;
-    text-transform: uppercase;
-    padding: 15px 27px;
-    letter-spacing: 1px;
-    border: 2px solid #fff;
-    transition: .3s ease;
+	display: inline-block;
+	font-weight: 400;
+	font-size: 16px;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 15px 27px;
+	letter-spacing: 1px;
+	border: 2px solid #fff;
+	transition: 0.3s ease;
 
-    &:hover {
-        color: $red;
-        background-color: #fff;
-        border: 1px solid $red;
-
-    }
+	&:hover {
+		color: $red;
+		background-color: #fff;
+		border: 2px solid $red;
+	}
 }
 
 .section-head {
-    text-align: center;
+	text-align: center;
 
-    p {
-        font-size: 16px;
-        line-height: 1.5;
-        text-align: center;
-        width: 100%;
-        padding: 25px 0 71px;
-    }
+	p {
+		font-size: 16px;
+		line-height: 1.5;
+		text-align: center;
+		width: 100%;
+		padding: 25px 0 71px;
+	}
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
 }
 
 .col-33 {
-    width: calc(33.3% - 30px);
-    flex-shrink: 0;
-    margin: 15px;
+	width: calc(33.3% - 30px);
+	flex-shrink: 0;
+	margin: 15px;
 }
 
 .red {
-    color: $red;
+	color: $red;
 }
 
 .form {
-    input[type='text'],
-    input[type='email'],
-    textarea,
-    .button-dark {
-        border: 1px solid $font-color;
-        height: 44px;
-        padding: 5px 15px;
-        outline: none;
-        font-size: 12px;
-        width: 100%;
-        font-family: $font-roboto;
+	input[type='text'],
+	input[type='email'],
+	textarea,
+	.button-dark {
+		border: 1px solid $font-color;
+		height: 44px;
+		padding: 5px 15px;
+		outline: none;
+		font-size: 12px;
+		width: 100%;
+		font-family: $font-roboto;
 
-        &:focus {
-            border-color: $red;
-        }
-    }
+		&:focus {
+			border-color: $red;
+		}
+	}
 
-    textarea {
-        height: 104px;
-        resize: vertical;
-    }
+	textarea {
+		height: 104px;
+		resize: vertical;
+	}
 
-    .button-dark {
-        text-align: center;
-        transition: .3s ease;
-        text-transform: uppercase;
-        max-width: 170px;
-        background: $white;
+	.button-dark {
+		text-align: center;
+		transition: 0.3s ease;
+		text-transform: uppercase;
+		max-width: 170px;
+		background: $white;
 
-        &:hover {
-            background: $red;
-            border-color: $red;
-            color: $white;
-            cursor: pointer;
-        }
-    }
+		&:hover {
+			background: $red;
+			border-color: $red;
+			color: $white;
+			cursor: pointer;
+		}
+	}
 
-    &__row {
-        margin: 0 0 20px;
-    }
+	&__row {
+		margin: 0 0 20px;
+	}
 
-    &__group {
-        @extend .form__row;
-        display: flex;
-        justify-content: space-between;
+	&__group {
+		@extend .form__row;
+		display: flex;
+		justify-content: space-between;
 
-        @include screen(476px) {
-            flex-direction: column;
-        }
+		@include screen(476px) {
+			flex-direction: column;
+		}
 
-        input[type='text'],
-        input[type='email'],
-        input {
-            width: calc(50% - 15px);
-        }
+		input[type='text'],
+		input[type='email'],
+		input {
+			width: calc(50% - 15px);
+		}
 
-        input[type='text']:nth-child(1) {
-            @include screen (476px) {
-                margin-bottom: 20px;
-            }
-        }
-    }
+		input[type='text']:nth-child(1) {
+			@include screen(476px) {
+				margin-bottom: 20px;
+			}
+		}
+	}
 
-    &__footer {
-        font-size: 12px;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
+	&__footer {
+		font-size: 12px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
 
-        .button-dark {
-            margin-right: 38px;
+		.button-dark {
+			margin-right: 38px;
 
-            @include screen(476px) {
-                margin-bottom: 10px;
-            }
-        }
-    }
+			@include screen(476px) {
+				margin-bottom: 10px;
+			}
+		}
+	}
 }

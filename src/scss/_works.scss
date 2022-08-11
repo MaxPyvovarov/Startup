@@ -1,135 +1,150 @@
 .works {
+	&__image {
+		position: relative;
+		height: 320px;
 
-    &__image {
-        position: relative;
-        height: 320px;
+		img {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			min-height: 100%;
+			min-width: 100%;
+			z-index: 1;
+		}
+	}
 
-        img {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            min-height: 100%;
-            min-width: 100%;
-            z-index: 1;
-        }
-    }
+	&__description {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		color: $white;
+		padding: 20px;
+		background: rgba(192, 48, 28, 0.7);
+		text-align: center;
+		opacity: 0;
+		transition: 0.3s;
 
-    &__description {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        color: $white;
-        padding: 20px;
-        background: rgba(192, 48, 28, .7);
-        text-align: center;
-        opacity: 0;
-        transition: .3s;
+		h6 {
+			font-family: $font-montserrat;
+			font-size: 18px;
+			margin: 0 0 10px;
+		}
 
-        h6 {
-            font-family: $font-montserrat;
-            font-size: 18px;
-            margin: 0 0 10px;
-        }
+		span {
+			font-size: 12px;
+			margin: 0 0 20px;
+		}
 
-        span {
-            font-size: 12px;
-            margin: 0 0 20px;
-        }
+		a {
+			background: $white;
+			transition: 0.3s;
+			font-size: 14px;
+			text-transform: uppercase;
+			color: $red;
+			padding: 12px 20px;
+			display: flex;
+			align-items: center;
+			line-height: 1;
 
-        a {
-            background: $white;
-            transition: .3s;
-            font-size: 14px;
-            text-transform: uppercase;
-            color: $red;
-            padding: 12px 20px;
-            display: flex;
-            align-items: center;
-            line-height: 1;
+			&:hover {
+				background: rgba(255, 255, 255, 0.85);
+			}
 
-            &:hover {
-                background: rgba(255,255,255,.85);
-            }
+			span {
+				display: inline-block;
+				width: 6px;
+				height: 10px;
+				vertical-align: top;
+				background: url('../images/arrow.png') no-repeat 50%;
+				background-size: 100% 100%;
+				margin: 0 0 0 10px;
+			}
+		}
+	}
 
-            span {
-                display: inline-block;
-                width: 6px;
-                height: 10px;
-                vertical-align: top;
-                background: url("../images/arrow.png") no-repeat 50%;
-                background-size: 100% 100%;
-                margin: 0 0 0 10px;
-            }
-        }
-    }
-
-    .col-33 {
-
-        &:hover {
-
-            .works__description {
-                opacity: 1;
-            }
-        }
-    }
+	.col-33 {
+		&:hover {
+			.works__description {
+				opacity: 1;
+			}
+		}
+	}
 }
 
 .tabs {
-    &__buttons {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 30px 45px;
+	&__buttons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 30px 45px;
 
-        @include screen(476px) {
-            flex-direction: column;
-        }
-    }
+		@include screen(476px) {
+			flex-direction: column;
+		}
+	}
 
-    &__button {
-        font-size: 16px;
-        font-family: $font-roboto;
-        padding: 5px 14px;
-        cursor: pointer;
+	&__button {
+		font-size: 16px;
+		font-family: $font-roboto;
+		padding: 5px 14px;
+		cursor: pointer;
 
-        &.active {
-            color: $red;
-        }
-    }
+		&.active {
+			color: $red;
+		}
+	}
 
-    &__item {
-        display: none;
-    }
+	&__item {
+		display: none;
 
-    .col-33 {
-        position: relative;
+		&.active {
+			display: block;
+		}
 
-        @include screen(860px) {
-            width: 45%;
-            height: auto;
+		&.fade {
+			animation-name: fade;
+			animation-duration: 0.7s;
+		}
 
-            &:nth-child(2n+1) {
-                display: none;
-            }
-        }
+		@keyframes fade {
+			from {
+				opacity: 0.3;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+	}
 
-        @include screen(670px) {
-            width: 60%;
-            padding: 30px 0;
-            margin: 0 auto;
-        }
+	.col-33 {
+		position: relative;
 
-        @include screen(476px) {
-            width: 75%;
-            padding: 10px 0;
-        }
-    }
+		@include screen(860px) {
+			width: 45%;
+			height: auto;
+
+			&:nth-child(2n + 1) {
+				display: none;
+			}
+		}
+
+		@include screen(670px) {
+			width: 60%;
+			padding: 30px 0;
+			margin: 0 auto;
+		}
+
+		@include screen(476px) {
+			width: 75%;
+			padding: 10px 0;
+		}
+	}
 }
